@@ -1,8 +1,8 @@
 {
-  "name": "heroui-news-app",
+  "name": "newshub-modern",
   "version": "2.0.0",
   "author": "Miu",
-  "description": "Modern News App with React + HeroUI",
+  "description": "A modern, responsive news aggregation platform built with React 18, HeroUI, and Vite, featuring Nordic-inspired design and exceptional cross-device experience",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,6 +1,6 @@
-# 📰 NewsHub - Modern Media Platform
+# 📰 NewsHub Modern - Next-Generation News Platform
 
-A modern, minimalist media platform built with React 18 + HeroUI + Vite, featuring elegant UI design and rich interactive experiences with Nordic-inspired aesthetics.
+A cutting-edge news aggregation platform built with React 18, HeroUI, and Vite. Features a modern, responsive design with Nordic-inspired aesthetics, delivering exceptional user experience across all devices.
 
 ## ✨ 特性
 
@@ -198,32 +198,22 @@ MIT License
 
 项目已配置好 Vercel 部署，推送到 GitHub 后可直接在 Vercel 中一键部署。
 
-> npm/cnpm 依赖安装(建议使用 cnpm)
+### 依赖安装
 
-```powershell
-$ npm install
+```bash
+npm install
 ```
 
-```powershell
-$ cnpm install
+### 开发环境启动
+
+```bash
+npm run dev
 ```
 
-> cnpm 需进行前置镜像安装
+### 生产构建
 
-```powershell
-$ npm install -g cnpm --registry=https://registry.npmmirror.com
-```
-
-> 打包操作(此处/符号意思为 npm 或者 cnpm 二选一)
-
-```powershell
-npm/cnpm run build
-```
-
-> 运行
-
-```powershell
-npm/cnpm run dev
+```bash
+npm run build
 ```
 
 **~ 如果该项目对您有帮助的话麻烦给个 🌟 噢 ~**
