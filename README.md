@@ -1,6 +1,6 @@
-# 📰 NewsHub Modern - Next-Generation News Platform
+# 📰 NewsHub Modern - News Platform
 
-A cutting-edge news aggregation platform built with React 18, HeroUI, and Vite. Features a modern, responsive design with Nordic-inspired aesthetics, delivering exceptional user experience across all devices.
+一个使用 React 18、HeroUI 和 Vite 构建的新闻聚合平台。具有响应式设计和简约风格设计，在所有设备上提供卓越的用户体验。
 
 ## ✨ 特性
 
@@ -215,5 +215,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-**~ 如果该项目对您有帮助的话麻烦给个 🌟 噢 ~**
