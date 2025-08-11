@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-nordic-50 dark:bg-nordic-900 text-nordic-900 dark:text-nordic-50;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* 自定义滚动条 - Nordic风格 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-nordic-100 dark:bg-nordic-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-nordic-300 dark:bg-nordic-600 rounded-full;
+    transition: background-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-nordic-400 dark:bg-nordic-500;
+  }
+}
+
+@layer components {
+  .news-card-hover {
+    @apply transition-all duration-300 hover:scale-[1.01] hover:shadow-nordic-md w-full;
+    @apply bg-white dark:bg-nordic-800 border border-nordic-200 dark:border-nordic-700;
+    @apply rounded-xl;
+  }
+
+  .news-card-hover:hover {
+    @apply border-frost-300 dark:border-frost-600;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-nordic-50 via-white to-frost-50;
+    @apply dark:from-nordic-900 dark:via-nordic-800 dark:to-nordic-900;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 dark:bg-nordic-900/80;
+    @apply border border-nordic-200/50 dark:border-nordic-700/50;
+    @apply rounded-2xl shadow-nordic-lg;
+  }
+
+  .nordic-card {
+    @apply bg-white dark:bg-nordic-800 border border-nordic-200 dark:border-nordic-700;
+    @apply rounded-xl shadow-nordic transition-all duration-200;
+  }
+
+  .nordic-card:hover {
+    @apply shadow-nordic-md border-nordic-300 dark:border-nordic-600;
+  }
+
+  .nordic-button {
+    @apply bg-frost-500 hover:bg-frost-600 text-white;
+    @apply border-0 rounded-lg px-4 py-2 font-medium;
+    @apply transition-all duration-200 shadow-nordic;
+  }
+
+  .nordic-button:hover {
+    @apply shadow-nordic-md transform translate-y-[-1px];
+  }
+
+  .nordic-input {
+    @apply bg-white dark:bg-nordic-800 border border-nordic-300 dark:border-nordic-600;
+    @apply rounded-lg px-3 py-2 text-nordic-900 dark:text-nordic-100;
+    @apply focus:border-frost-500 focus:ring-2 focus:ring-frost-500/20;
+    @apply transition-all duration-200;
+  }
+
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer::before {
+    @apply absolute inset-0 -translate-x-full;
+    content: '';
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shimmer 1.5s infinite;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}

@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "name": "heroui-news-app",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Requested-With, Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "VITE_JUHE_API_KEY": "@juhe_api_key",
+    "VITE_JUHE_BASE_URL": "http://v.juhe.cn/toutiao",
+    "VITE_APP_TITLE": "NewsHub - HeroUI News App",
+    "VITE_APP_DESCRIPTION": "现代化NewsHub应用，基于React和HeroUI构建"
+  }
+}
